@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.20" systemVersion="15A204h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7hc-EJ-qno">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.16"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--知乎日报-->
+        <scene sceneID="IIO-CY-NVz">
+            <objects>
+                <tableViewController id="K8y-9B-80H" customClass="ISHomeListTVC" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Kfl-AN-ihS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="banner" rowHeight="300" id="5Nr-s0-5yg">
+                                <rect key="frame" x="0.0" y="86" width="600" height="300"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Nr-s0-5yg" id="8HK-LY-JAD">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerBg" translatesAutoresizingMaskIntoConstraints="NO" id="XP4-vz-p5D">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                                            <animations/>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="XP4-vz-p5D" firstAttribute="leading" secondItem="8HK-LY-JAD" secondAttribute="leadingMargin" constant="-8" id="BLY-zQ-8hC"/>
+                                        <constraint firstItem="XP4-vz-p5D" firstAttribute="top" secondItem="8HK-LY-JAD" secondAttribute="topMargin" constant="-8" id="p2y-a8-A5d"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="XP4-vz-p5D" secondAttribute="bottom" constant="-8" id="sQd-yw-m5D"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="XP4-vz-p5D" secondAttribute="trailing" constant="-8" id="vFe-1A-kQ2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.2685569706" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="content" rowHeight="100" id="YPG-Io-Rc0" customClass="ISHomeListCellView">
+                                <rect key="frame" x="0.0" y="386" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YPG-Io-Rc0" id="mQw-Kj-ICv">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="加载中..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI5-Vt-204">
+                                            <rect key="frame" x="8" y="8" width="459" height="84"/>
+                                            <animations/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1GG-HP-dNi">
+                                            <rect key="frame" x="483" y="8" width="109" height="84"/>
+                                            <animations/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1GG-HP-dNi" secondAttribute="height" multiplier="109:84" id="qqU-1R-OFP"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="1GG-HP-dNi" firstAttribute="leading" secondItem="SI5-Vt-204" secondAttribute="trailing" constant="16" id="Ht7-Wq-D4r"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="SI5-Vt-204" secondAttribute="leading" id="Pr7-f0-kbx"/>
+                                        <constraint firstItem="1GG-HP-dNi" firstAttribute="centerY" secondItem="mQw-Kj-ICv" secondAttribute="centerY" id="Ryt-2B-GTF"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="SI5-Vt-204" secondAttribute="bottom" id="Z78-hW-bAi"/>
+                                        <constraint firstAttribute="topMargin" secondItem="SI5-Vt-204" secondAttribute="top" id="jrX-Zv-1OG"/>
+                                        <constraint firstAttribute="topMargin" secondItem="1GG-HP-dNi" secondAttribute="top" id="m31-xY-v6O"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="1GG-HP-dNi" secondAttribute="bottom" id="o0v-Je-6Uj"/>
+                                        <constraint firstItem="SI5-Vt-204" firstAttribute="height" secondItem="1GG-HP-dNi" secondAttribute="height" id="t7W-J6-zL3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="1GG-HP-dNi" secondAttribute="trailing" id="xsj-le-14o"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="t7W-J6-zL3"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="previewIV" destination="1GG-HP-dNi" id="0u2-0a-lhU"/>
+                                    <outlet property="titleTF" destination="SI5-Vt-204" id="psj-Mh-6on"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="K8y-9B-80H" id="qOx-5t-zDr"/>
+                            <outlet property="delegate" destination="K8y-9B-80H" id="eKP-JD-Jnm"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="知乎日报" id="oci-tT-z6n">
+                        <barButtonItem key="leftBarButtonItem" image="sideBarBarButtonItem" id="sqY-YS-Fsp" userLabel="Side Bar Item">
+                            <color key="tintColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                            <connections>
+                                <action selector="aplSwitchSideBar:" destination="K8y-9B-80H" id="B7H-DI-WPb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gab-Jf-L7J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2157" y="-172"/>
+        </scene>
+        <!--Question 1-->
+        <scene sceneID="y56-CZ-FAW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7hc-EJ-qno" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Question 1" id="7Ty-ly-FJQ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="90N-Os-Cfs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K8y-9B-80H" kind="relationship" relationship="rootViewController" id="ZCL-3B-I72"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uwa-un-UNI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1441" y="-172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bannerBg" width="408" height="302"/>
+        <image name="sideBarBarButtonItem" width="34" height="34"/>
+    </resources>
+</document>
